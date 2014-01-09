@@ -1,0 +1,896 @@
+---
+layout: post
+category : meeting_notes
+tagline: "January 7
+tags : [engineering, notes]
+---
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title></title>
+<script type="text/javascript" src="outliner.js"></script><style type="text/css">
+			
+			
+			th {
+			vertical-align: bottom;
+			
+			}
+			
+			td {
+			vertical-align: top;
+			}
+			
+			td,th {
+			
+			empty-cells: show;
+			}
+			
+			.top-right-border {
+			
+			}
+			
+			.no-border {
+			border-bottom: 0px;
+			border-left: 0px;
+			}
+			
+			
+			
+			
+			table {
+			
+			font-family: Helvetica, sans-serif;
+			font-size: 12px;
+			font-family: "Gill Sans", sans-serif;  			
+			
+			}
+
+			
+			
+			.wholeDocument {
+			color:rgb(99,121,128) ;  font-family: "Gill Sans", sans-serif;  background-color:rgb(251,244,225) ;  
+	
+			}
+		
+			
+			td.subcell {
+			border: none;
+			}
+			
+			td.content {
+			padding-left: 4px;
+			padding-bottom: 2px;
+			padding-top: 1px;
+			padding-right: 3px;
+			}
+			
+			.full {
+			height: 100%;
+			}
+			
+			.heighthack {
+			height: 8px;
+			}
+			
+			div.titlepadding { 
+			padding-right:3px;
+			padding-left:6px;
+			padding-bottom:3px;
+			padding-top: 2px;
+			}
+			
+			
+					.summary_node {
+						background: rgba(0,0,0,.12);
+						margin-bottom: 1px;
+					}
+				
+			
+			div.column {   
+			padding-right: 3px;
+			padding-left: 4px;
+			padding-top: 1px;
+			padding-bottom: 2px;
+			margin-right: 1px;
+			}
+			
+			.labelpadding {
+			padding-right: 3px;
+			padding-top: 1px;
+			padding-left: 2px;
+			}
+			
+			.indicator {
+			white-space: nowrap;
+			text-align:right;
+			margin-right: 0px;
+			vertical-align: top;
+			padding-top: 1px;
+			padding-left: 0px;
+			}
+			
+			.wholedocgutter {
+			
+			}
+			
+			div.row {
+			}
+			
+			div.headerRow {
+			}
+			
+			.expanded {
+			display: inline;
+			}
+			.collapsed {
+			display: none;
+			}
+			
+            div.palette-hit-zone {
+                position: fixed;
+                bottom: 0px;
+				height: 33%;
+                left:50%;
+                width: 66%;
+                margin-left: -33%;
+            }
+
+			div.floating-palette {
+                -webkit-border-radius: 5px;
+                -webkit-transition: opacity is fade-in-out;
+                -webkit-transition-duration: 1s;
+				background-color: rgb(64, 64, 64);
+                opacity:0.7;
+				width: 88px;
+				height: 44px;
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                margin-left: -44px;
+			}
+            
+            div.palette-cell {
+                opacity:1;
+                margin-top: 6px;
+                margin-bottom: 6px;
+                position: absolute;
+                height: 32px;
+                width: 32px;
+            }
+            
+            div.cell-divider {
+                position: absolute;
+                margin-top: 6px;
+                margin-bottom: 6px;
+                margin-left: 44px;
+                height: 32px;
+                width:0px;
+                position:absolute;
+                left:0px;
+                border-right:rgb(207, 207, 207) 2px solid;
+            }
+
+			
+			
+			
+			.note { 
+			padding-left: 5px;
+			padding-right: 3px; 
+			border: none; 
+			color:rgb(146,161,161) ;  
+			}
+			
+			/* Total table width is 678
+			Adjusted table width is 718 */
+			
+			.wholething {
+				width: auto;
+			}
+			
+			
+			table.row {
+				
+						width: 678px;
+						
+			
+			}
+			
+			
+    .col_width1 { 
+        width: 678px;  /* Actual width is 678 */
+    }
+
+    .col1 { 
+        
+    }
+
+    .colbackground1 { 
+        
+    }
+
+			
+			/* Level Styles */
+			
+			
+    .ns-Heading-1 { 
+        font-size: 32px;}
+
+    .ns-Heading-2 { 
+        font-size: 16px;}
+
+    .ns-Emphasis { 
+        color:rgb(88,111,118) ;  font-weight: 900;  }
+
+    .ns-Highlight { 
+        }
+
+    .ns-Yellow { 
+        color:rgb(181,135,5) ;  }
+
+    .ns-Orange { 
+        color:rgb(204,77,22) ;  }
+
+    .ns-Red { 
+        color:rgb(218,50,46) ;  }
+
+    .ns-Magenta { 
+        color:rgb(210,54,131) ;  }
+
+    .ns-Violet { 
+        color:rgb(107,112,197) ;  }
+
+    .ns-Blue { 
+        color:rgb(38,138,209) ;  }
+
+    .ns-Cyan { 
+        color:rgb(42,161,151) ;  }
+
+    .ns-Green { 
+        color:rgb(132,153,4) ;  }
+
+    .ns-bg-Heading-1 { 
+        }
+
+    .ns-bg-Heading-2 { 
+        }
+
+    .ns-bg-Emphasis { 
+        }
+
+    .ns-bg-Highlight { 
+        background-color:rgb(236,230,210) ;  }
+
+    .ns-bg-Yellow { 
+        }
+
+    .ns-bg-Orange { 
+        }
+
+    .ns-bg-Red { 
+        }
+
+    .ns-bg-Magenta { 
+        }
+
+    .ns-bg-Violet { 
+        }
+
+    .ns-bg-Blue { 
+        }
+
+    .ns-bg-Cyan { 
+        }
+
+    .ns-bg-Green { 
+        }
+
+    .ns-gutter-Heading-1 { 
+        }
+
+    .ns-gutter-Heading-2 { 
+        }
+
+    .ns-gutter-Emphasis { 
+        }
+
+    .ns-gutter-Highlight { 
+        }
+
+    .ns-gutter-Yellow { 
+        }
+
+    .ns-gutter-Orange { 
+        }
+
+    .ns-gutter-Red { 
+        }
+
+    .ns-gutter-Magenta { 
+        }
+
+    .ns-gutter-Violet { 
+        }
+
+    .ns-gutter-Blue { 
+        }
+
+    .ns-gutter-Cyan { 
+        }
+
+    .ns-gutter-Green { 
+        }
+</style>
+</head>
+<body class="wholeDocument"><table cellspacing="0" cellpadding="0" class="top-right-border"><tr><td class="wholething no-border">
+<!--Column Titles--><table cellspacing="0" border="0" cellpadding="0" class="headerRow heighthack"><tr><td class=" col_width1"><div class="columntitle titlepadding">Topic<br>
+</div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1 ns-bg-Heading-1 ns-bg-Yellow"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1 ns-Heading-1 ns-Yellow ns-gutter-Heading-1 ns-gutter-Yellow" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1 ns-Heading-1 ns-Yellow ns-gutter-Heading-1 ns-gutter-Yellow" style="width: 15px;"><img onmousedown="ioSwitch('pitHCU-VF1_e', event.shiftKey)" id="iitHCU-VF1_e" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level1 ns-Heading-1 ns-Yellow subcell" style="font-size: 32px;color:rgb(181,135,5) ;  font-size: 32px;color:rgb(181,135,5) ;  font-size: 25px;">Building a hyper-lean iOS app UI for showcasing functionality<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pitHCU-VF1_e" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Heading-2 ns-bg-Orange"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Heading-2 ns-Orange ns-gutter-Heading-2 ns-gutter-Orange" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Heading-2 ns-Orange ns-gutter-Heading-2 ns-gutter-Orange" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level2 ns-Heading-2 ns-Orange subcell" style="font-size: 16px;color:rgb(204,77,22) ;  font-size: 16px;color:rgb(204,77,22) ;  font-size: 18px;">Engineer:  Ryan<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Cyan ns-gutter-Cyan" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img onmousedown="ioSwitch('pcdvmyi8cBK1', event.shiftKey)" id="icdvmyi8cBK1" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level2 ns-Cyan subcell" style="color:rgb(42,161,151) ;  font-size: 18px;">Goals:  <br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pcdvmyi8cBK1" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">allow core Blinker app functionality to be showcased via lean "active wireframes"<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">be minimally opinionated and invested with regard to UI/UX so that our work is easy for West to modify later<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Violet"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Violet ns-gutter-Violet" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Violet ns-gutter-Violet" style="width: 15px;"><img onmousedown="ioSwitch('plfi5C18jUCg', event.shiftKey)" id="ilfi5C18jUCg" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level2 ns-Violet subcell" style="color:rgb(107,112,197) ;  font-size: 18px;">Context:<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="plfi5C18jUCg" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Violet"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Violet ns-gutter-Violet" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Violet ns-gutter-Violet" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Violet subcell" style="color:rgb(107,112,197) ;  ">In order to deliver on the Denver Demo, we need to be able to sell a car.  Ryan is building out a function-centric iOS client application with minimal core functionality (most of this being offloaded to the Blinker API) to act as the main interface for this deliverable.<br>
+</td>
+</tr></table></div></td></tr></table></div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1 ns-bg-Heading-1 ns-bg-Yellow"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1 ns-Heading-1 ns-Yellow ns-gutter-Heading-1 ns-gutter-Yellow" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1 ns-Heading-1 ns-Yellow ns-gutter-Heading-1 ns-gutter-Yellow" style="width: 15px;"><img onmousedown="ioSwitch('pax1h4TID7PK', event.shiftKey)" id="iax1h4TID7PK" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level1 ns-Heading-1 ns-Yellow subcell" style="font-size: 32px;color:rgb(181,135,5) ;  font-size: 32px;color:rgb(181,135,5) ;  font-size: 25px;">Wiring our lean iOS app into the core Blinker application via our API<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pax1h4TID7PK" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Heading-2 ns-bg-Orange"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Heading-2 ns-Orange ns-gutter-Heading-2 ns-gutter-Orange" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Heading-2 ns-Orange ns-gutter-Heading-2 ns-gutter-Orange" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level2 ns-Heading-2 ns-Orange subcell" style="font-size: 16px;color:rgb(204,77,22) ;  font-size: 16px;color:rgb(204,77,22) ;  font-size: 18px;">Engineer:  Don<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Cyan ns-gutter-Cyan" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img onmousedown="ioSwitch('pfqXlgiSmhf8', event.shiftKey)" id="ifqXlgiSmhf8" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level2 ns-Cyan subcell" style="color:rgb(42,161,151) ;  font-size: 18px;">Goals:  <br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pfqXlgiSmhf8" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">offload all real functionality to the core Blinker app so that the iOS application is a lightweight client<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img onmousedown="ioSwitch('pabpRhjPtV7w', event.shiftKey)" id="iabpRhjPtV7w" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level3 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">pull "transactional intelligence" from the Blinker API so that we can give app users a premium experience<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pabpRhjPtV7w" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4 ns-Cyan ns-gutter-Cyan" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level4 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">reminders when it's their turn to act<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4 ns-Cyan ns-gutter-Cyan" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level4 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">tracking where they are in the transactional flow<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor4 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level4 levelguttercolor4 ns-Cyan ns-gutter-Cyan" style="width: 57px;"></td>
+<td class=" subcell wholedocgutter indicator level4 levelguttercolor4 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level4 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">the automation and guidance thru the transaction that's core to Blinker's promise<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">"Eat our own dog food" - this process is serving to tighten up our API logic as we interact with it (refactoring this logic will be a major focus in the upcoming sprint)<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Violet"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Violet ns-gutter-Violet" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Violet ns-gutter-Violet" style="width: 15px;"><img onmousedown="ioSwitch('piqmzlA2xrVG', event.shiftKey)" id="iiqmzlA2xrVG" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level2 ns-Violet subcell" style="color:rgb(107,112,197) ;  font-size: 18px;">Context:<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="piqmzlA2xrVG" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Violet"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Violet ns-gutter-Violet" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Violet ns-gutter-Violet" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Violet subcell" style="color:rgb(107,112,197) ;  ">We envision a seamless cross-client experience down the road:  if a user starts a transaction on the web, completes some steps on thier phone, and then moves back to the web, we should track all this movement and provide a seamless experience for them.  Even though this won't be immediately apparent in the Denver Demo due to time constraints, building the iOS app so that it's "lean" and offloading the core logic to our API helps strengthen both the API and the iOS application for future work.<br>
+</td>
+</tr></table></div></td></tr></table></div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1 ns-bg-Heading-1 ns-bg-Yellow"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1 ns-Heading-1 ns-Yellow ns-gutter-Heading-1 ns-gutter-Yellow" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1 ns-Heading-1 ns-Yellow ns-gutter-Heading-1 ns-gutter-Yellow" style="width: 15px;"><img onmousedown="ioSwitch('pekFOxvYreMz', event.shiftKey)" id="iekFOxvYreMz" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level1 ns-Heading-1 ns-Yellow subcell" style="font-size: 32px;color:rgb(181,135,5) ;  font-size: 32px;color:rgb(181,135,5) ;  font-size: 25px;">Building foundational pieces of the future Blinker.com<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pekFOxvYreMz" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Heading-2 ns-bg-Orange"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Heading-2 ns-Orange ns-gutter-Heading-2 ns-gutter-Orange" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Heading-2 ns-Orange ns-gutter-Heading-2 ns-gutter-Orange" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level2 ns-Heading-2 ns-Orange subcell" style="font-size: 16px;color:rgb(204,77,22) ;  font-size: 16px;color:rgb(204,77,22) ;  font-size: 18px;">Engineer:  Dan<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Cyan ns-gutter-Cyan" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img onmousedown="ioSwitch('piVRLucjvjPU', event.shiftKey)" id="iiVRLucjvjPU" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level2 ns-Cyan subcell" style="color:rgb(42,161,151) ;  font-size: 18px;">Goals:  <br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="piVRLucjvjPU" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">allow end users to put a "Blinker ID" into the home page and be redirected to a Blinker listing<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">catch users at the listing and pipe them, as intelligently as possible, into the iOS app<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Violet"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Violet ns-gutter-Violet" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Violet ns-gutter-Violet" style="width: 15px;"><img onmousedown="ioSwitch('pfdguizMyUcG', event.shiftKey)" id="ifdguizMyUcG" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level2 ns-Violet subcell" style="color:rgb(107,112,197) ;  font-size: 18px;">Context:<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pfdguizMyUcG" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Violet"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Violet ns-gutter-Violet" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Violet ns-gutter-Violet" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Violet subcell" style="color:rgb(107,112,197) ;  ">While a robust website is not a requirement for the Denver Demo, a couple of foundational pieces do need to exist.  Here we imagine a user with very little Blinker awareness receiving a "Blinker ID" from somewhere on the web, going to our root domain to investigate, and Blinker coaxing said user into a purchasing flow.  After they view the listing, we will be offloading them to the iOS app for now - in the future, we will handle the various client platforms within which they might want to continue transacting (Android, Web).<br>
+</td>
+</tr></table></div></td></tr></table></div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1 ns-bg-Heading-1 ns-bg-Yellow"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1 ns-Heading-1 ns-Yellow ns-gutter-Heading-1 ns-gutter-Yellow" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1 ns-Heading-1 ns-Yellow ns-gutter-Heading-1 ns-gutter-Yellow" style="width: 15px;"><img onmousedown="ioSwitch('pdxSV74NhVpz', event.shiftKey)" id="idxSV74NhVpz" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level1 ns-Heading-1 ns-Yellow subcell" style="font-size: 32px;color:rgb(181,135,5) ;  font-size: 32px;color:rgb(181,135,5) ;  font-size: 25px;">Foundation of an Administration Console<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pdxSV74NhVpz" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Heading-2 ns-bg-Orange"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Heading-2 ns-Orange ns-gutter-Heading-2 ns-gutter-Orange" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Heading-2 ns-Orange ns-gutter-Heading-2 ns-gutter-Orange" style="width: 15px;"><img onmousedown="ioSwitch('pl7FwcpEf8XC', event.shiftKey)" id="il7FwcpEf8XC" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level2 ns-Heading-2 ns-Orange subcell" style="font-size: 16px;color:rgb(204,77,22) ;  font-size: 16px;color:rgb(204,77,22) ;  font-size: 18px;">Engineer:  Dan<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pl7FwcpEf8XC" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Heading-2 ns-bg-Orange"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Heading-2 ns-Orange ns-gutter-Heading-2 ns-gutter-Orange" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Heading-2 ns-Orange ns-gutter-Heading-2 ns-gutter-Orange" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Heading-2 ns-Orange subcell" style="font-size: 16px;color:rgb(204,77,22) ;  font-size: 16px;color:rgb(204,77,22) ;  font-size: 18px;">dashboard work:  Jordan<br>
+</td>
+</tr></table></div></td></tr></table></div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Cyan ns-gutter-Cyan" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img onmousedown="ioSwitch('pdatks7YZBbL', event.shiftKey)" id="idatks7YZBbL" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level2 ns-Cyan subcell" style="color:rgb(42,161,151) ;  font-size: 18px;">Goals:  <br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pdatks7YZBbL" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">create framework for future administration panels<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">show example functionality in a very raw form<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">demonstrate administrative transactional approval flow (specifically for moving funds)<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Violet"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Violet ns-gutter-Violet" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Violet ns-gutter-Violet" style="width: 15px;"><img onmousedown="ioSwitch('pnyUBl0SukBs', event.shiftKey)" id="inyUBl0SukBs" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level2 ns-Violet subcell" style="color:rgb(107,112,197) ;  font-size: 18px;">Context:<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pnyUBl0SukBs" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Violet"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Violet ns-gutter-Violet" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Violet ns-gutter-Violet" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Violet subcell" style="color:rgb(107,112,197) ;  ">Lending requires not only machine but human interaction in the transactional flow.  While there are still unknowns at the business process level, here we aim to show at least a taste of how administrative approval could work.  Additionally, we'll provide a stripped-down example of how analytics might be built into the administrative dashboard.<br>
+</td>
+</tr></table></div></td></tr></table></div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1 ns-bg-Heading-1 ns-bg-Yellow"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1 ns-Heading-1 ns-Yellow ns-gutter-Heading-1 ns-gutter-Yellow" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1 ns-Heading-1 ns-Yellow ns-gutter-Heading-1 ns-gutter-Yellow" style="width: 15px;"><img onmousedown="ioSwitch('pea_LTd0gwA2', event.shiftKey)" id="iea_LTd0gwA2" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level1 ns-Heading-1 ns-Yellow subcell" style="font-size: 32px;color:rgb(181,135,5) ;  font-size: 32px;color:rgb(181,135,5) ;  font-size: 25px;">Document generation and mailing<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pea_LTd0gwA2" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Heading-2 ns-bg-Orange"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Heading-2 ns-Orange ns-gutter-Heading-2 ns-gutter-Orange" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Heading-2 ns-Orange ns-gutter-Heading-2 ns-gutter-Orange" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level2 ns-Heading-2 ns-Orange subcell" style="font-size: 16px;color:rgb(204,77,22) ;  font-size: 16px;color:rgb(204,77,22) ;  font-size: 18px;">Engineer:  Robin<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Cyan ns-gutter-Cyan" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img onmousedown="ioSwitch('pm5sgfxfpn8S', event.shiftKey)" id="im5sgfxfpn8S" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level2 ns-Cyan subcell" style="color:rgb(42,161,151) ;  font-size: 18px;">Goals:  <br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pm5sgfxfpn8S" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">send appriopriate documents to users when required by the overall transactional flow<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">provide these docs in a format that's easy for end users (email; PDF for now)<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Violet"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Violet ns-gutter-Violet" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Violet ns-gutter-Violet" style="width: 15px;"><img onmousedown="ioSwitch('poPmD76ww-lz', event.shiftKey)" id="ioPmD76ww-lz" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level2 ns-Violet subcell" style="color:rgb(107,112,197) ;  font-size: 18px;">Context:<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="poPmD76ww-lz" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Violet"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Violet ns-gutter-Violet" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Violet ns-gutter-Violet" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Violet subcell" style="color:rgb(107,112,197) ;  ">Colorado is not yet fully automated with regard to buying and selling vehicles (we still require wet signatures on some documents).  As such, the Denver Demo will email these documents to users in an easily accessible form a the step of the transaction that requires them to sign and remit these documents.<br>
+</td>
+</tr></table></div></td></tr></table></div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1 ns-bg-Heading-1 ns-bg-Yellow"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1 ns-Heading-1 ns-Yellow ns-gutter-Heading-1 ns-gutter-Yellow" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1 ns-Heading-1 ns-Yellow ns-gutter-Heading-1 ns-gutter-Yellow" style="width: 15px;"><img onmousedown="ioSwitch('pmT6N0kyV3Nx', event.shiftKey)" id="imT6N0kyV3Nx" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level1 ns-Heading-1 ns-Yellow subcell" style="font-size: 32px;color:rgb(181,135,5) ;  font-size: 32px;color:rgb(181,135,5) ;  font-size: 25px;">Push messaging and emails<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pmT6N0kyV3Nx" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Heading-2 ns-bg-Orange"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Heading-2 ns-Orange ns-gutter-Heading-2 ns-gutter-Orange" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Heading-2 ns-Orange ns-gutter-Heading-2 ns-gutter-Orange" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level2 ns-Heading-2 ns-Orange subcell" style="font-size: 16px;color:rgb(204,77,22) ;  font-size: 16px;color:rgb(204,77,22) ;  font-size: 18px;">Engineer:  Robin<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Cyan ns-gutter-Cyan" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img onmousedown="ioSwitch('plGnYZkiOxHN', event.shiftKey)" id="ilGnYZkiOxHN" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level2 ns-Cyan subcell" style="color:rgb(42,161,151) ;  font-size: 18px;">Goals:  <br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="plGnYZkiOxHN" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">provide rich feedback that will guide users thru buying and/or sellling a car<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">send users push notifications when required<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">send emails when required<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">allow for future product individuals to A/B test all these messages<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">alow P2P messaging for direct communication between seller and buyer<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Violet"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Violet ns-gutter-Violet" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Violet ns-gutter-Violet" style="width: 15px;"><img onmousedown="ioSwitch('pp9W1NZwzuNF', event.shiftKey)" id="ip9W1NZwzuNF" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level2 ns-Violet subcell" style="color:rgb(107,112,197) ;  font-size: 18px;">Context:<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pp9W1NZwzuNF" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Violet"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Violet ns-gutter-Violet" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Violet ns-gutter-Violet" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Violet subcell" style="color:rgb(107,112,197) ;  ">As metioned above, part of our brand promise here is transactional management.  Robin is building out a system of push notifications and emails that will guide our users seamlessly through the entire transaction.  Additionally, buyers and sellers will be able to negotiate with one another directly from within the iOS application.<br>
+</td>
+</tr></table></div></td></tr></table></div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1 ns-bg-Heading-1 ns-bg-Yellow"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1 ns-Heading-1 ns-Yellow ns-gutter-Heading-1 ns-gutter-Yellow" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1 ns-Heading-1 ns-Yellow ns-gutter-Heading-1 ns-gutter-Yellow" style="width: 15px;"><img onmousedown="ioSwitch('plOXTnN8u59l', event.shiftKey)" id="ilOXTnN8u59l" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level1 ns-Heading-1 ns-Yellow subcell" style="font-size: 32px;color:rgb(181,135,5) ;  font-size: 32px;color:rgb(181,135,5) ;  font-size: 25px;">Credit pull integration<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="plOXTnN8u59l" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Heading-2 ns-bg-Orange"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Heading-2 ns-Orange ns-gutter-Heading-2 ns-gutter-Orange" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Heading-2 ns-Orange ns-gutter-Heading-2 ns-gutter-Orange" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level2 ns-Heading-2 ns-Orange subcell" style="font-size: 16px;color:rgb(204,77,22) ;  font-size: 16px;color:rgb(204,77,22) ;  font-size: 18px;">Engineer:  Jordan<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Cyan ns-gutter-Cyan" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img onmousedown="ioSwitch('pdBhoDTJpTSw', event.shiftKey)" id="idBhoDTJpTSw" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level2 ns-Cyan subcell" style="color:rgb(42,161,151) ;  font-size: 18px;">Goals:  <br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pdBhoDTJpTSw" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">incorporate into the core Blinker application the ability to pull a user's credit<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">build relevant endpoints into the Blinker API<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Violet"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Violet ns-gutter-Violet" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Violet ns-gutter-Violet" style="width: 15px;"><img onmousedown="ioSwitch('pbXFpAfBbrKh', event.shiftKey)" id="ibXFpAfBbrKh" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level2 ns-Violet subcell" style="color:rgb(107,112,197) ;  font-size: 18px;">Context:<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pbXFpAfBbrKh" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Violet"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Violet ns-gutter-Violet" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Violet ns-gutter-Violet" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Violet subcell" style="color:rgb(107,112,197) ;  ">As we're all aware, we will need to pull users' credit ratings during the financing flow.  For the Denver Demo, this is slightly out of scope (partially due to the fact that we won't be getting real access to Equifax until the 8th).  Nonetheless, Jordan has been doing sollid work on integrating with Equifax based on what we have from them so that this functionality goes live in short order.  For the Demo, expect this bit to be handled with mock API calls rather than direct Equifax requests.<br>
+</td>
+</tr></table></div></td></tr></table></div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1 ns-bg-Heading-1 ns-bg-Yellow"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1 ns-Heading-1 ns-Yellow ns-gutter-Heading-1 ns-gutter-Yellow" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1 ns-Heading-1 ns-Yellow ns-gutter-Heading-1 ns-gutter-Yellow" style="width: 15px;"><img onmousedown="ioSwitch('pb4q4i2EQ-yJ', event.shiftKey)" id="ib4q4i2EQ-yJ" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level1 ns-Heading-1 ns-Yellow subcell" style="font-size: 32px;color:rgb(181,135,5) ;  font-size: 32px;color:rgb(181,135,5) ;  font-size: 25px;">API development and refactoring<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pb4q4i2EQ-yJ" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Heading-2 ns-bg-Orange"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Heading-2 ns-Orange ns-gutter-Heading-2 ns-gutter-Orange" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Heading-2 ns-Orange ns-gutter-Heading-2 ns-gutter-Orange" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level2 ns-Heading-2 ns-Orange subcell" style="font-size: 16px;color:rgb(204,77,22) ;  font-size: 16px;color:rgb(204,77,22) ;  font-size: 18px;">Engineer:  Alexi, Aaron,Jeff<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Cyan ns-gutter-Cyan" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img onmousedown="ioSwitch('piD1cfgLTm2-', event.shiftKey)" id="iiD1cfgLTm2-" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level2 ns-Cyan subcell" style="color:rgb(42,161,151) ;  font-size: 18px;">Goals:  <br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="piD1cfgLTm2-" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">build out API functionality required specifically by the Denver Demo that doesn't currently exist<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">refactor (as little as possible!) the existing API codebase when current architecture proves to be problematic<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Violet"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Violet ns-gutter-Violet" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Violet ns-gutter-Violet" style="width: 15px;"><img onmousedown="ioSwitch('pcDm9_nkenAl', event.shiftKey)" id="icDm9_nkenAl" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level2 ns-Violet subcell" style="color:rgb(107,112,197) ;  font-size: 18px;">Context:<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pcDm9_nkenAl" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Violet"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Violet ns-gutter-Violet" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Violet ns-gutter-Violet" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Violet subcell" style="color:rgb(107,112,197) ;  ">Don't let the brevity of this section mislead you:  this is an absolutely monster task on a very tight timeline.  Alexi, Aaron, and Jeff have been working like absolute animals to pull this off.  Chief challenges here arise from legacy code being the product of tight timelines and outwardly focused deliverables.  Taking a beat after the Denver Demo to develop proper documentation standards and refactor the codebase with an eye to Blinker 1.0 will pay untold dividents for future work of this type.<br>
+</td>
+</tr></table></div></td></tr></table></div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1 ns-bg-Heading-1 ns-bg-Yellow"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1 ns-Heading-1 ns-Yellow ns-gutter-Heading-1 ns-gutter-Yellow" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1 ns-Heading-1 ns-Yellow ns-gutter-Heading-1 ns-gutter-Yellow" style="width: 15px;"><img onmousedown="ioSwitch('pilwxWxygeK7', event.shiftKey)" id="iilwxWxygeK7" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level1 ns-Heading-1 ns-Yellow subcell" style="font-size: 32px;color:rgb(181,135,5) ;  font-size: 32px;color:rgb(181,135,5) ;  font-size: 25px;">API documentation and troubleshooting<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pilwxWxygeK7" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Heading-2 ns-bg-Orange"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Heading-2 ns-Orange ns-gutter-Heading-2 ns-gutter-Orange" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Heading-2 ns-Orange ns-gutter-Heading-2 ns-gutter-Orange" style="width: 15px;"><img onmousedown="ioSwitch('piB-D1kWO96P', event.shiftKey)" id="iiB-D1kWO96P" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level2 ns-Heading-2 ns-Orange subcell" style="font-size: 16px;color:rgb(204,77,22) ;  font-size: 16px;color:rgb(204,77,22) ;  font-size: 18px;">Engineer:  Jeff, Alexi, Aaron<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="piB-D1kWO96P" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Heading-2 ns-bg-Orange"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Heading-2 ns-Orange ns-gutter-Heading-2 ns-gutter-Orange" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Heading-2 ns-Orange ns-gutter-Heading-2 ns-gutter-Orange" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Heading-2 ns-Orange subcell" style="font-size: 16px;color:rgb(204,77,22) ;  font-size: 16px;color:rgb(204,77,22) ;  font-size: 18px;">support:  Don, Robin, ...kinda everyone...<br>
+</td>
+</tr></table></div></td></tr></table></div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Cyan ns-gutter-Cyan" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img onmousedown="ioSwitch('phIqrPpUr_kT', event.shiftKey)" id="ihIqrPpUr_kT" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level2 ns-Cyan subcell" style="color:rgb(42,161,151) ;  font-size: 18px;">Goals:  <br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="phIqrPpUr_kT" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">build out sample calls and responses for our API to make developing for it easier and/or possible<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">triage the API with an eye to the Denver Demo:  what functionality does everyone need and when do they need it<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Violet"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Violet ns-gutter-Violet" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Violet ns-gutter-Violet" style="width: 15px;"><img onmousedown="ioSwitch('pgcphYyguYJ9', event.shiftKey)" id="igcphYyguYJ9" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level2 ns-Violet subcell" style="color:rgb(107,112,197) ;  font-size: 18px;">Context:<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pgcphYyguYJ9" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Violet"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Violet ns-gutter-Violet" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Violet ns-gutter-Violet" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Violet subcell" style="color:rgb(107,112,197) ;  ">Tight timelines necessitate ninjas.  The Denver Demo is like an Emergency Room - because we have a full featured deliverable on our hands and are still perfecting our own level of insight into our codebase (documentation, legacy code), this makes for the Denver Demo being inherently somewhat of a moving target.  As such, we need some triage of development as it happens.  The API team (and really, the team at large) has been absolutely kicking ass here - since the entire deliverable is API-centric, lots of engineers have been pitching in.<br>
+</td>
+</tr></table></div></td></tr></table></div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1 ns-bg-Heading-1 ns-bg-Yellow"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1 ns-Heading-1 ns-Yellow ns-gutter-Heading-1 ns-gutter-Yellow" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1 ns-Heading-1 ns-Yellow ns-gutter-Heading-1 ns-gutter-Yellow" style="width: 15px;"><img onmousedown="ioSwitch('pp8ADAEQcUom', event.shiftKey)" id="ip8ADAEQcUom" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level1 ns-Heading-1 ns-Yellow subcell" style="font-size: 32px;color:rgb(181,135,5) ;  font-size: 32px;color:rgb(181,135,5) ;  font-size: 25px;">ACH integration<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pp8ADAEQcUom" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Heading-2 ns-bg-Orange"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Heading-2 ns-Orange ns-gutter-Heading-2 ns-gutter-Orange" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Heading-2 ns-Orange ns-gutter-Heading-2 ns-gutter-Orange" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level2 ns-Heading-2 ns-Orange subcell" style="font-size: 16px;color:rgb(204,77,22) ;  font-size: 16px;color:rgb(204,77,22) ;  font-size: 18px;">Engineer:  Robin<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Cyan ns-gutter-Cyan" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img onmousedown="ioSwitch('posicFUZdkE2', event.shiftKey)" id="iosicFUZdkE2" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level2 ns-Cyan subcell" style="color:rgb(42,161,151) ;  font-size: 18px;">Goals:  <br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="posicFUZdkE2" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">allow Buyer to move money to Blinker account<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">allow Seller to collect money from Blinker account<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">build out API endpoints responsible for letting administrators approve the above actions<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Violet"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Violet ns-gutter-Violet" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Violet ns-gutter-Violet" style="width: 15px;"><img onmousedown="ioSwitch('pfK_lupBnY2r', event.shiftKey)" id="ifK_lupBnY2r" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level2 ns-Violet subcell" style="color:rgb(107,112,197) ;  font-size: 18px;">Context:<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pfK_lupBnY2r" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Violet"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Violet ns-gutter-Violet" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Violet ns-gutter-Violet" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Violet subcell" style="color:rgb(107,112,197) ;  ">Obviously, if we don't move money this whole thing is kind of a non-starter.  Robin has been working on integration with Bancbox (a tall task, as we only recently partnered with them).  There are some intricacies around lending that we're not going to be dealing with for the Denver Demo, but the escrow side of Blinker will be represented - including the part of the flow that requires administrative approval.<br>
+</td>
+</tr></table></div></td></tr></table></div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1 ns-bg-Heading-1 ns-bg-Yellow"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1 ns-Heading-1 ns-Yellow ns-gutter-Heading-1 ns-gutter-Yellow" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1 ns-Heading-1 ns-Yellow ns-gutter-Heading-1 ns-gutter-Yellow" style="width: 15px;"><img onmousedown="ioSwitch('pfUoRQBq8Cla', event.shiftKey)" id="ifUoRQBq8Cla" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level1 ns-Heading-1 ns-Yellow subcell" style="font-size: 32px;color:rgb(181,135,5) ;  font-size: 32px;color:rgb(181,135,5) ;  font-size: 25px;">Transactional management<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pfUoRQBq8Cla" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Heading-2 ns-bg-Orange"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Heading-2 ns-Orange ns-gutter-Heading-2 ns-gutter-Orange" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Heading-2 ns-Orange ns-gutter-Heading-2 ns-gutter-Orange" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level2 ns-Heading-2 ns-Orange subcell" style="font-size: 16px;color:rgb(204,77,22) ;  font-size: 16px;color:rgb(204,77,22) ;  font-size: 18px;">Engineer:  Alexi, Aaron<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Cyan ns-gutter-Cyan" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img onmousedown="ioSwitch('pkFfX0ohSTUP', event.shiftKey)" id="ikFfX0ohSTUP" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level2 ns-Cyan subcell" style="color:rgb(42,161,151) ;  font-size: 18px;">Goals:  <br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pkFfX0ohSTUP" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Cyan"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Cyan ns-gutter-Cyan" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Cyan subcell" style="color:rgb(42,161,151) ;  ">intelligent transactional management on behalf of buyer and seller<br>
+</td>
+</tr></table></div></td></tr></table></div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Violet"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Violet ns-gutter-Violet" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Violet ns-gutter-Violet" style="width: 15px;"><img onmousedown="ioSwitch('pn95l1xH2y0T', event.shiftKey)" id="in95l1xH2y0T" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" border="0" alt="V" src="Expanded.png" title="collapse"></td>
+<td class=" content level2 ns-Violet subcell" style="color:rgb(107,112,197) ;  font-size: 18px;">Context:<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pn95l1xH2y0T" class="expanded"><table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Violet"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Violet ns-gutter-Violet" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Violet ns-gutter-Violet" style="width: 15px;"><img border="0" style="margin-left: 3px; margin-right:3px; margin-top: 3px;" alt="*" src="LeafRowHandle.png"></td>
+<td class=" content level3 ns-Violet subcell" style="color:rgb(107,112,197) ;  ">The Denver Demo needs to be able to manage the buyer/seller transactional flow.  This is a high complecity problem, and central to the promise of replacing a human (the dealer) with our application.  A simple linear checklist approach doesn't afford the transactional flexibility that we'd want to offer (for example, you probably shouldn't *have* to test drive the car before you buy it even though it's a good idea).  There are also cases where a user could conceivably go backwards in the checklist (I sent an ACH, but it didn't go thru - now I have to go back and do it again).  The plethora of edge cases here are what merits this being a chunk of work unto itself.<br>
+</td>
+</tr></table></div></td></tr></table></div>
+</div>
+</td></tr></table></body>
+</html>
