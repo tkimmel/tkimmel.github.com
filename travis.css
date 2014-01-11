@@ -1,0 +1,55 @@
+.page-header h1 {
+  text-align: center;
+}
+
+.latestNotes {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#aboutTravis {
+  -webkit-perspective: 800;
+  -webkit-perspective-origin: 50% 200px;
+}
+
+#travisCube {
+  position: relative;
+  margin: 0 auto;
+  height: 400px;
+  width: 400px;
+  -webkit-transition: -webkit-transform 2s linear;
+  -webkit-transform-style: preserve-3d;
+}
+
+.face {
+  position: absolute;
+  height: 360px;
+  width: 360px;
+  padding: 20px;
+  background-color: rgba(50, 50, 50, 0.7);
+}
+
+#travisCube .one  {
+  -webkit-transform: rotateX(90deg) translateZ(200px);
+}
+
+#travisCube .two {
+  -webkit-transform: translateZ(200px);
+}
+
+#travisCube .three {
+  -webkit-transform: rotateY(90deg) translateZ(200px);
+}
+
+#travisCube .four {
+  -webkit-transform: rotateY(180deg) translateZ(200px);
+}
+
+#travisCube .five {
+  -webkit-transform: rotateY(-90deg) translateZ(200px);
+}
+
+#travisCube.six {
+  -webkit-transform: rotateX(-90deg) translateZ(200px) rotate(180deg);
+}
