@@ -8,7 +8,7 @@ tagline: This is Jekyll.  I'm still playing with it.
     <link rel="stylesheet" href="animate.min.css">
 </head>
 
-<div style="height: 100px; width: 100px; background-color: #000; ">
+<div style="height: 100px; width: 100px; background-color: #000;"> hai </div>
 
 <ul class="posts">
   {% for post in site.posts %}
