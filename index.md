@@ -4,6 +4,11 @@ title: WIP Site
 tagline: This is Jekyll.  I'm still playing with it.
 ---
 {% include JB/setup %}
+<head>
+    <link rel="stylesheet" href="animate.min.css">
+</head>
+
+<div style="height: 100px; width: 100px; background-color: #000; ">
 
 <ul class="posts">
   {% for post in site.posts %}
