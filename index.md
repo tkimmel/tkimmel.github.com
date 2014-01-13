@@ -3,7 +3,8 @@ layout: page
 title: "Travis' Sandbox"
 ---
 
-<button type="button" class="btn btn-default latestNotes animated tada">Get the latest meeting notes</button>
+<button type="button" class="btn latestNotes animated tada">Get the latest meeting notes</button>
+
 
 <ul class="posts">
   {% for post in site.posts %}
