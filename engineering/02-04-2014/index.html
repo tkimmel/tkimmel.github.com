@@ -1,0 +1,618 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title></title>
+<script type="text/javascript" src="outliner.js"></script><style type="text/css">
+			
+                        img.status {
+                        margin-left: 2px; margin-right: 2px; margin-top: 2px; height: 11px; width: 11px;
+                        }
+                        
+                        img.checkbox-column {
+                        height: 11px; width: 11px; vertical-align: top; margin-top: 3px;
+                        }
+                        
+                        img.leaf {
+                        margin-left: 3px; margin-right:3px; margin-top: 2px; margin-bottom: 3px; height: 6px; width 6px;
+                        }
+                        
+                        img.parent {
+                        margin-left: 3px; margin-right:3px; margin-top: 2px; height: 10px; width: 10px;
+                        }
+			
+			th {
+			vertical-align: bottom;
+			
+			}
+			
+			td {
+			vertical-align: top;
+			}
+			
+			td,th {
+			
+			empty-cells: show;
+			}
+			
+			.top-right-border {
+			
+			}
+			
+			.no-border {
+			border-bottom: 0px;
+			border-left: 0px;
+			}
+			
+			
+			
+			
+			table {
+			
+			font-family: Helvetica, sans-serif;
+			font-size: 12px;
+			font-family: "Helvetica Neue", sans-serif;  font-size: 13px;			
+			
+			}
+
+			
+			
+			.wholeDocument {
+			color:rgb(26,30,37) ;  font-family: "Helvetica Neue", sans-serif;  font-size: 13px;background-color:rgb(206,209,216) ;  
+	
+			}
+		
+			
+			td.subcell {
+			border: none;
+			}
+			
+			td.content {
+			padding-left: 4px;
+			padding-bottom: 2px;
+			padding-top: 1px;
+			padding-right: 3px;
+			}
+			
+			.full {
+			height: 100%;
+			}
+			
+			.heighthack {
+                        
+                            height: 25px;
+                            
+			}
+			
+			div.titlepadding { 
+			padding-right:3px;
+			padding-left:6px;
+			padding-bottom:3px;
+			padding-top: 2px;
+			}
+			
+			
+					.summary_node {
+						background: rgba(0,0,0,.12);
+						margin-bottom: 1px;
+					}
+				
+			
+			div.column {   
+			padding-right: 3px;
+			padding-left: 4px;
+			padding-top: 0px;
+			padding-bottom: 0px;
+			margin-right: 1px;
+			}
+			
+			.labelpadding {
+			padding-right: 3px;
+			padding-top: 1px;
+			padding-left: 2px;
+			}
+			
+			.indicator {
+			white-space: nowrap;
+			text-align:right;
+			margin-right: 0px;
+			vertical-align: top;
+			padding-top: 1px;
+			padding-left: 0px;
+			}
+			
+			.wholedocgutter {
+			
+			}
+			
+			div.row {
+			}
+			
+			div.headerRow {
+			}
+			
+			.expanded {
+			display: inline;
+			}
+			.collapsed {
+			display: none;
+			}
+			
+            div.palette-hit-zone {
+                position: fixed;
+                bottom: 0px;
+				height: 33%;
+                left:50%;
+                width: 66%;
+                margin-left: -33%;
+            }
+
+			div.floating-palette {
+                -webkit-border-radius: 5px;
+                -webkit-transition: opacity is fade-in-out;
+                -webkit-transition-duration: 1s;
+				background-color: rgb(64, 64, 64);
+                opacity:0.7;
+				width: 88px;
+				height: 44px;
+                position: fixed;
+                bottom: 20px;
+                left: 50%;
+                margin-left: -44px;
+			}
+            
+            div.palette-cell {
+                opacity:1;
+                margin-top: 6px;
+                margin-bottom: 6px;
+                position: absolute;
+                height: 32px;
+                width: 32px;
+            }
+            
+            div.cell-divider {
+                position: absolute;
+                margin-top: 6px;
+                margin-bottom: 6px;
+                margin-left: 44px;
+                height: 32px;
+                width:0px;
+                position:absolute;
+                left:0px;
+                border-right:rgb(207, 207, 207) 2px solid;
+            }
+			
+			
+			
+			
+			.note { 
+			padding-left: 5px;
+			padding-right: 3px; 
+			border: none; 
+			color:rgba(53,60,76,0.65) ;  
+			}
+			
+			/* Total table width is 1024
+			Adjusted table width is 1085 */
+			
+			.wholething {
+				width: auto;
+			}
+			
+			
+			table.row {
+				
+						width: 1024px;
+						
+			
+			}
+			
+			
+    .col_width1 { 
+        width: 1024px;  /* Actual width is 1024 */
+    }
+
+    .col1 { 
+        
+    }
+
+    .colbackground1 { 
+        
+    }
+
+			
+			/* Level Styles */
+			
+			
+    .columntitle { 
+        font-weight: 600;  
+    }
+
+    .ns-Heading-1 { 
+        color:rgb(53,61,77) ;  font-weight: 300;  font-size: 30px;}
+
+    .ns-Heading-2 { 
+        color:rgb(26,30,37) ;  font-size: 18px;}
+
+    .ns-Heading-3 { 
+        color:rgb(26,30,37) ;  font-weight: 600;  font-size: 13px;}
+
+    .ns-Highlight:-Yellow { 
+        }
+
+    .ns-Highlight:--Red { 
+        }
+
+    .ns-Highlight:-Red { 
+        }
+
+    .ns-Purple { 
+        color:rgb(120,78,166) ;  }
+
+    .ns-Blue { 
+        color:rgb(46,114,191) ;  }
+
+    .ns-Bondi { 
+        color:rgb(0,164,164) ;  }
+
+    .ns-Green { 
+        color:rgb(77,140,40) ;  }
+
+    .ns-Yellow { 
+        color:rgb(165,121,0) ;  }
+
+    .ns-Orange { 
+        color:rgb(190,108,57) ;  }
+
+    .ns-Red { 
+        color:rgb(192,76,94) ;  }
+
+    .ns-Graphite { 
+        color:rgb(91,105,140) ;  }
+
+    .ns-bg-Heading-1 { 
+        }
+
+    .ns-bg-Heading-2 { 
+        }
+
+    .ns-bg-Heading-3 { 
+        }
+
+    .ns-bg-Highlight:-Yellow { 
+        background-color:rgba(255,187,0,0.25) ;  }
+
+    .ns-bg-Highlight:--Red { 
+        background-color:rgba(242,96,119,0.25) ;  }
+
+    .ns-bg-Highlight:-Red { 
+        background-color:rgba(103,187,53,0.25) ;  }
+
+    .ns-bg-Purple { 
+        }
+
+    .ns-bg-Blue { 
+        }
+
+    .ns-bg-Bondi { 
+        }
+
+    .ns-bg-Green { 
+        }
+
+    .ns-bg-Yellow { 
+        }
+
+    .ns-bg-Orange { 
+        }
+
+    .ns-bg-Red { 
+        }
+
+    .ns-bg-Graphite { 
+        }
+
+    .ns-gutter-Heading-1 { 
+        }
+
+    .ns-gutter-Heading-2 { 
+        }
+
+    .ns-gutter-Heading-3 { 
+        }
+
+    .ns-gutter-Highlight:-Yellow { 
+        }
+
+    .ns-gutter-Highlight:--Red { 
+        }
+
+    .ns-gutter-Highlight:-Red { 
+        }
+
+    .ns-gutter-Purple { 
+        }
+
+    .ns-gutter-Blue { 
+        }
+
+    .ns-gutter-Bondi { 
+        }
+
+    .ns-gutter-Green { 
+        }
+
+    .ns-gutter-Yellow { 
+        }
+
+    .ns-gutter-Orange { 
+        }
+
+    .ns-gutter-Red { 
+        }
+
+    .ns-gutter-Graphite { 
+        }
+</style>
+</head>
+<body class="wholeDocument"><table cellspacing="0" cellpadding="0" class="top-right-border"><tr><td class="wholething no-border">
+<!--Column Titles--><table cellspacing="0" border="0" cellpadding="0" class="headerRow heighthack"><tr><td class=" col_width1"><div class="columntitle titlepadding">Topic<br>
+</div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1 ns-bg-Heading-1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1 ns-Heading-1 ns-gutter-Heading-1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1 ns-Heading-1 ns-gutter-Heading-1" style="width: 15px;"><img onmousedown="ioSwitch('plQmAB2YjMPe', event.shiftKey)" id="ilQmAB2YjMPe" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1 ns-Heading-1 ns-gutter-Heading-1" style=" width: 1px; color:rgb(53,61,77) ;  font-weight: 300;  font-size: 30px;"></td>
+<td class=" content level1 ns-Heading-1 subcell" style="color:rgb(53,61,77) ;  font-weight: 300;  font-size: 30px;">Top priority:  get Sprint 1 operational<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="plQmAB2YjMPe" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Blue"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Blue ns-gutter-Blue" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Blue ns-gutter-Blue" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2 ns-Blue ns-gutter-Blue" style=" width: 1px; color:rgb(46,114,191) ;  font-size: 18px;"></td>
+<td class=" content level2 ns-Blue subcell" style="color:rgb(46,114,191) ;  font-size: 18px;">
+<span class="" style="font-weight: 900;  ">WHERE WE’RE AT:</span>  In terms of progressing on the core product, we’re a bit stalled until the Sprint 1 assets are in their final form<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Purple"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Purple ns-gutter-Purple" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Purple ns-gutter-Purple" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2 ns-Purple ns-gutter-Purple" style=" width: 1px; color:rgb(120,78,166) ;  font-size: 14px;"></td>
+<td class=" content level2 ns-Purple subcell" style="color:rgb(120,78,166) ;  font-size: 14px;">
+<span class="" style="font-weight: 900;  ">WHAT WE NEED:</span>  We need to know that there’s executive sign off on these comps (at least at a high level) before we start implementing them.<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Red"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Red ns-gutter-Red" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Red ns-gutter-Red" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2 ns-Red ns-gutter-Red" style=" width: 1px; color:rgb(192,76,94) ;  font-size: 14px;"></td>
+<td class=" content level2 ns-Red subcell" style="color:rgb(192,76,94) ;  font-size: 14px;">
+<span class="" style="font-weight: 900;  ">WHY WE NEED IT:</span>  As we expected, the designs we’re seeing are not just art but contain high-concept UX implications as well.  Given this, we’re loathe to start working on implementing anything client-side without Blinker-wide sign off from.  To illustrate this - the latest flows are significant enough that we’ve elected to start fresh on the client applications as opposed to building on top of Trailer Park, which was actually relatively robust from a functional perspective.  Without general assent, our fear is that we’ll find ourselves in a similar position in the not-too-distant future.  <br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; font-size: 14px;"></td>
+<td class=" content level2 subcell" style="font-size: 14px;">
+<span class="" style="color:rgb(26,103,51) ;  font-weight: 900;  ">WHAT WE’RE DOING ABOUT IT:  </span><span class="" style="color:rgb(26,103,51) ;  ">Much of the calendaring work is toward fleshing this out and getting greater unity between Design and Engineering.  That said, we do need to institutionalize some process for asset sign off prior to those assets being handed off to Engineering.  My current understanding is that Woo Jin and West are working on this.  It’s my strong recommendation that all of us at Blinker support this process in whatever way possible.</span><br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1 ns-bg-Heading-1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1 ns-Heading-1 ns-gutter-Heading-1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1 ns-Heading-1 ns-gutter-Heading-1" style="width: 15px;"><img onmousedown="ioSwitch('pkWw1ayMdcbY', event.shiftKey)" id="ikWw1ayMdcbY" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1 ns-Heading-1 ns-gutter-Heading-1" style=" width: 1px; color:rgb(53,61,77) ;  font-weight: 300;  font-size: 30px;"></td>
+<td class=" content level1 ns-Heading-1 subcell" style="color:rgb(53,61,77) ;  font-weight: 300;  font-size: 30px;">Second priority:  Blinker master schedule / work calendar<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pkWw1ayMdcbY" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Blue"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Blue ns-gutter-Blue" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Blue ns-gutter-Blue" style="width: 15px;"><img onmousedown="ioSwitch('pnM6VDqU-4Xt', event.shiftKey)" id="inM6VDqU-4Xt" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2 ns-Blue ns-gutter-Blue" style=" width: 1px; color:rgb(46,114,191) ;  font-size: 18px;"></td>
+<td class=" content level2 ns-Blue subcell" style="color:rgb(46,114,191) ;  font-size: 18px;">
+<span class="" style="font-weight: 900;  ">WHERE WE’RE AT:</span>  Need to institutionalize “final form” asset handoffs<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pnM6VDqU-4Xt" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Blue"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Blue ns-gutter-Blue" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Blue ns-gutter-Blue" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3 ns-Blue ns-gutter-Blue" style=" width: 1px; color:rgb(46,114,191) ;  font-size: 14px;"></td>
+<td class=" content level3 ns-Blue subcell" style="color:rgb(46,114,191) ;  font-size: 14px;">obviously, minor iterations are expected, but flows and major assets should be locked in<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Blue"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Blue ns-gutter-Blue" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Blue ns-gutter-Blue" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3 ns-Blue ns-gutter-Blue" style=" width: 1px; color:rgb(46,114,191) ;  font-size: 14px;"></td>
+<td class=" content level3 ns-Blue subcell" style="color:rgb(46,114,191) ;  font-size: 14px;">flows done, refinement to follow (80/20 rule)<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Purple"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Purple ns-gutter-Purple" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Purple ns-gutter-Purple" style="width: 15px;"><img onmousedown="ioSwitch('ppMgcg6YHYJ4', event.shiftKey)" id="ipMgcg6YHYJ4" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2 ns-Purple ns-gutter-Purple" style=" width: 1px; color:rgb(120,78,166) ;  font-size: 14px;"></td>
+<td class=" content level2 ns-Purple subcell" style="color:rgb(120,78,166) ;  font-size: 14px;">
+<span class="" style="font-weight: 900;  ">WHAT WE NEED:</span> <br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="ppMgcg6YHYJ4" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Purple"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style=" width: 1px; color:rgb(120,78,166) ;  font-size: 14px;"></td>
+<td class=" content level3 ns-Purple subcell" style="color:rgb(120,78,166) ;  font-size: 14px;">work calendar that’s signed off on by the executive level of all major branches<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Purple"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style=" width: 1px; color:rgb(120,78,166) ;  font-size: 14px;"></td>
+<td class=" content level3 ns-Purple subcell" style="color:rgb(120,78,166) ;  font-size: 14px;">similar level of sign off on how handoff occurs from design —&gt; engineering, marketing —&gt; engineering, and product —&gt; engineering<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Red"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Red ns-gutter-Red" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Red ns-gutter-Red" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2 ns-Red ns-gutter-Red" style=" width: 1px; color:rgb(192,76,94) ;  font-size: 14px;"></td>
+<td class=" content level2 ns-Red subcell" style="color:rgb(192,76,94) ;  font-size: 14px;">
+<span class="" style="font-weight: 900;  ">WHY WE NEED IT:</span>  Even though there’s a fair degree of operational coordination happening, there’s still a degree of uncertainty about major benchmarks, deliverable due dates, and Blinker business targets (other than the July 1 launch).  Executive sign off on a master Blinker calendar would greatly help the situation.<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2" style=" width: 1px; font-size: 14px;"></td>
+<td class=" content level2 subcell" style="font-size: 14px;">
+<span class="" style="color:rgb(26,103,51) ;  font-weight: 900;  ">WHAT WE’RE DOING ABOUT IT:  </span><span class="" style="color:rgb(26,103,51) ;  ">That big meeting at 2:30 MST / 1:30 PST.  </span><br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1 ns-bg-Heading-1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1 ns-Heading-1 ns-gutter-Heading-1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1 ns-Heading-1 ns-gutter-Heading-1" style="width: 15px;"><img onmousedown="ioSwitch('pm19-vXwIDyq', event.shiftKey)" id="im19-vXwIDyq" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1 ns-Heading-1 ns-gutter-Heading-1" style=" width: 1px; color:rgb(53,61,77) ;  font-weight: 300;  font-size: 30px;"></td>
+<td class=" content level1 ns-Heading-1 subcell" style="color:rgb(53,61,77) ;  font-weight: 300;  font-size: 30px;">What Engineering is doing in the meantime:<br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pm19-vXwIDyq" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Blue"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Blue ns-gutter-Blue" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Blue ns-gutter-Blue" style="width: 15px;"><img onmousedown="ioSwitch('plz9jmIxfkVB', event.shiftKey)" id="ilz9jmIxfkVB" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2 ns-Blue ns-gutter-Blue" style=" width: 1px; color:rgb(46,114,191) ;  font-size: 18px;"></td>
+<td class=" content level2 ns-Blue subcell" style="color:rgb(46,114,191) ;  font-size: 18px;">
+<span class="" style="font-weight: 900;  ">iOS MISCELLANEA: </span><br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="plz9jmIxfkVB" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Purple"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style=" width: 1px; color:rgb(120,78,166) ;  font-size: 14px;"></td>
+<td class=" content level3 ns-Purple subcell" style="color:rgb(120,78,166) ;  font-size: 14px;">
+<span class="" style="font-weight: 900;  ">A/B testing</span> - research into the latest tools and functional demos<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Purple"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style=" width: 1px; color:rgb(120,78,166) ;  font-size: 14px;"></td>
+<td class=" content level3 ns-Purple subcell" style="color:rgb(120,78,166) ;  font-size: 14px;">
+<span class="" style="font-weight: 900;  ">Crash Reporting</span> - selecting and wiring in our crash reporting system for iOS<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Purple"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style=" width: 1px; color:rgb(120,78,166) ;  font-size: 14px;"></td>
+<td class=" content level3 ns-Purple subcell" style="color:rgb(120,78,166) ;  font-size: 14px;">
+<span class="" style="font-weight: 900;  ">Analytics and Behavior Tracking</span> - setting up foundational infrastructure for this; working with West to find out what data we ought to be collecting<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Blue"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Blue ns-gutter-Blue" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Blue ns-gutter-Blue" style="width: 15px;"><img onmousedown="ioSwitch('ppiLbIZSFl5P', event.shiftKey)" id="ipiLbIZSFl5P" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2 ns-Blue ns-gutter-Blue" style=" width: 1px; color:rgb(46,114,191) ;  font-size: 18px;"></td>
+<td class=" content level2 ns-Blue subcell" style="color:rgb(46,114,191) ;  font-size: 18px;">
+<span class="" style="font-weight: 900;  ">Blinker API:</span><br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="ppiLbIZSFl5P" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Purple"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style=" width: 1px; color:rgb(120,78,166) ;  font-size: 14px;"></td>
+<td class=" content level3 ns-Purple subcell" style="color:rgb(120,78,166) ;  font-size: 14px;">
+<span class="" style="font-weight: 900;  ">Database Refactor</span> - finishing this up<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Purple"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style=" width: 1px; color:rgb(120,78,166) ;  font-size: 14px;"></td>
+<td class=" content level3 ns-Purple subcell" style="color:rgb(120,78,166) ;  font-size: 14px;">
+<span class="" style="font-weight: 900;  ">Misc API endpoint work</span> - refine API as best we can, given uncertainty<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Blue"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Blue ns-gutter-Blue" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Blue ns-gutter-Blue" style="width: 15px;"><img onmousedown="ioSwitch('pagkUilohGo-', event.shiftKey)" id="iagkUilohGo-" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2 ns-Blue ns-gutter-Blue" style=" width: 1px; color:rgb(46,114,191) ;  font-size: 18px;"></td>
+<td class=" content level2 ns-Blue subcell" style="color:rgb(46,114,191) ;  font-size: 18px;">
+<span class="" style="font-weight: 900;  ">Web Admin: </span><br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pagkUilohGo-" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Purple"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style=" width: 1px; color:rgb(120,78,166) ;  font-size: 14px;"></td>
+<td class=" content level3 ns-Purple subcell" style="color:rgb(120,78,166) ;  font-size: 14px;">
+<span class="" style="font-weight: 900;  ">Core platform</span> - pivoting a bit on how we do Admin<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Purple"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style=" width: 1px; color:rgb(120,78,166) ;  font-size: 14px;"></td>
+<td class=" content level3 ns-Purple subcell" style="color:rgb(120,78,166) ;  font-size: 14px;">
+<span class="" style="font-weight: 900;  ">User Masquerade</span> - requirements and discussions about how this might work<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+</div>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor1 ns-bg-Heading-1"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level1 levelguttercolor1 ns-Heading-1 ns-gutter-Heading-1" style="width: 9px;"></td>
+<td class=" subcell wholedocgutter indicator level1 levelguttercolor1 ns-Heading-1 ns-gutter-Heading-1" style="width: 15px;"><img onmousedown="ioSwitch('paX5auEQXDCL', event.shiftKey)" id="iaX5auEQXDCL" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level1 levelguttercolor1 ns-Heading-1 ns-gutter-Heading-1" style=" width: 1px; color:rgb(53,61,77) ;  font-weight: 300;  font-size: 30px;"></td>
+<td class=" content level1 ns-Heading-1 subcell" style="color:rgb(53,61,77) ;  font-weight: 300;  font-size: 30px;">Bon Voyage, Jordan  <br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="paX5auEQXDCL" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor2 ns-bg-Blue"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level2 levelguttercolor2 ns-Blue ns-gutter-Blue" style="width: 25px;"></td>
+<td class=" subcell wholedocgutter indicator level2 levelguttercolor2 ns-Blue ns-gutter-Blue" style="width: 15px;"><img onmousedown="ioSwitch('pkuSljYGyBgG', event.shiftKey)" id="ikuSljYGyBgG" border="0" alt="V" class="parent" src="Expanded.png" title="collapse"></td>
+<td class=" subcell wholedocgutter labelpadding level2 levelguttercolor2 ns-Blue ns-gutter-Blue" style=" width: 1px; color:rgb(46,114,191) ;  font-size: 18px;"></td>
+<td class=" content level2 ns-Blue subcell" style="color:rgb(46,114,191) ;  font-size: 18px;">
+<span class="" style="font-weight: 900;  ">Jordan got an offer he couldn’t refuse (congrats!)</span><br>
+</td>
+</tr></table></div></td></tr></table>
+<div id="pkuSljYGyBgG" class="expanded">
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Purple"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style=" width: 1px; color:rgb(120,78,166) ;  font-size: 14px;"></td>
+<td class=" content level3 ns-Purple subcell" style="color:rgb(120,78,166) ;  font-size: 14px;">Heading back home to CA<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Purple"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style=" width: 1px; color:rgb(120,78,166) ;  font-size: 14px;"></td>
+<td class=" content level3 ns-Purple subcell" style="color:rgb(120,78,166) ;  font-size: 14px;">Wrapping up Equifax work with us first<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Purple"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style=" width: 1px; color:rgb(120,78,166) ;  font-size: 14px;"></td>
+<td class=" content level3 ns-Purple subcell" style="color:rgb(120,78,166) ;  font-size: 14px;">Starts new gig with DoubleBeam on February 17th<br>
+</td>
+</tr></table></div></td></tr></table>
+<table cellspacing="0" border="0" cellpadding="0" class="row heighthack"><tr><td class=" col1 colbackground1 col_width1" style=""><div class=" full levelcolor3 ns-bg-Purple"><table border="0" cellspacing="0" cellpadding="0" style="height:100%" class=" col_width1 col1"><tr>
+<td class=" subcell wholedocgutter level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style="width: 41px;"></td>
+<td class=" subcell wholedocgutter indicator level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style="width: 15px;"><img border="0" alt="*" class="leaf" src="LeafRowHandle.png"></td>
+<td class=" subcell wholedocgutter labelpadding level3 levelguttercolor3 ns-Purple ns-gutter-Purple" style=" width: 1px; color:rgb(120,78,166) ;  font-size: 14px;"></td>
+<td class=" content level3 ns-Purple subcell" style="color:rgb(120,78,166) ;  font-size: 14px;">Last day with Blinker:  Feb 14th<br>
+</td>
+</tr></table></div></td></tr></table>
+</div>
+</div>
+</td></tr></table></body>
+</html>
