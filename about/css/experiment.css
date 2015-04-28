@@ -3,7 +3,7 @@ h2 {
 }
 
 .viewport {
-    -webkit-perspective: 800;
+    -webkit-perspective: 700;
     -webkit-perspective-origin: 50% 200px;
     -webkit-transform: scale(0.75,0.75);
 
